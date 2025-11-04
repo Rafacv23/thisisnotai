@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+html {
+	@apply mx-auto my-4 max-w-3xl;
+}
