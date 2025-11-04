@@ -1,27 +1,49 @@
 <script lang="ts">
+	import { buttonVariants } from './ui/button';
+
 	const SECTIONS = [
 		{
-			title: 'Home',
-			href: '/'
+			title: 'Works',
+			href: '/works'
 		},
 		{
-			title: 'Demo',
-			href: '/demo'
+			title: 'Tools',
+			href: '/tools'
 		},
+		{
+			title: 'About',
+			href: '/about'
+		}
+	];
+
+	const SOCIALS = [
 		{
 			title: 'GitHub',
 			href: '/github'
+		},
+		{
+			title: 'Contribute',
+			href: '/contribute'
 		}
 	];
 </script>
 
 <header
-	class="border-card mb-8 flex items-center justify-between rounded-xl border px-8 py-4 shadow-sm"
+	class="mb-8 flex items-center justify-between rounded-xl border border-card px-8 py-4 shadow-sm"
 >
-	<span>This is not AI</span>
+	<a href="/" title="Home" class={buttonVariants({ variant: 'ghost' })}>This is not AI</a>
 	<nav class="space-x-4">
 		{#each SECTIONS as SECTION}
-			<a href={SECTION.href} title={SECTION.title}>{SECTION.title}</a>
+			<a href={SECTION.href} title={SECTION.title} class={buttonVariants({ variant: 'ghost' })}
+				>{SECTION.title}</a
+			>
+		{/each}
+	</nav>
+	<nav class="space-x-4">
+		{#each SOCIALS as SOCIAL}
+			<a href={SOCIAL.href} title={SOCIAL.title} class={buttonVariants({ variant: 'default' })}
+				>{SOCIAL.title}</a
+			>
 		{/each}
 	</nav>
 </header>
