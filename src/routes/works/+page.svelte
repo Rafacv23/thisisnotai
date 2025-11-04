@@ -15,13 +15,13 @@
 <h1>Different type of arts, made by humans</h1>
 <h2>Where the spirit does not work with the hand, there is no art. - Leonardo Da Vinci</h2>
 <Tabs value="all">
-	<nav class="mt-8 mb-4 flex flex-col items-center space-x-2 md:flex-row">
-		<TabsList>
+	<nav class="mt-8 mb-4 flex flex-col items-center gap-2 md:flex-row">
+		<TabsList class="w-full">
 			{#each TABS as tab}
 				<TabsTrigger value={tab.value}>{tab.label}</TabsTrigger>
 			{/each}
 		</TabsList>
-		<Input placeholder="Search works..." class="w-auto" />
+		<Input placeholder="Search works..." class="" />
 	</nav>
 	<TabsContent value="all">
 		<div>
