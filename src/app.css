@@ -116,7 +116,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply mx-4 my-4 max-w-3xl bg-background font-serif text-foreground antialiased lg:mx-auto;
+		@apply mx-4 my-4 max-w-3xl bg-background text-foreground antialiased lg:mx-auto;
 	}
 
 	h1 {
