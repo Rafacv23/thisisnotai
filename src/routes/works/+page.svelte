@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { Tabs, TabsContent, TabsList, TabsTrigger } from '$lib/components/ui/tabs/index';
+	import WorkCard from '$lib/components/work-card.svelte';
 
 	const TABS = [
 		{ value: 'all', label: 'All' },
@@ -25,8 +26,10 @@
 	</nav>
 	<TabsContent value="all">
 		<div>
-			<ul>
-				<li>Work example</li>
+			<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+				<li>
+					<WorkCard />
+				</li>
 			</ul>
 		</div>
 	</TabsContent>
