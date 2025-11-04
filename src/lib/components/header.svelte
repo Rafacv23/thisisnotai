@@ -7,8 +7,8 @@
 			href: '/works'
 		},
 		{
-			title: 'Tools',
-			href: '/tools'
+			title: 'Contribute',
+			href: '/contribute'
 		},
 		{
 			title: 'About',
@@ -28,7 +28,7 @@
 			>
 		{/each}
 	</nav>
-	<a href="/github" title="Give us a star on GitHub" class={buttonVariants({ variant: 'primary' })}
+	<a href="/github" title="Give us a star on GitHub" class={buttonVariants({ variant: 'default' })}
 		>GitHub</a
 	>
 </header>
