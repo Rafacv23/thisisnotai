@@ -15,17 +15,6 @@
 			href: '/about'
 		}
 	];
-
-	const SOCIALS = [
-		{
-			title: 'GitHub',
-			href: '/github'
-		},
-		{
-			title: 'Contribute',
-			href: '/contribute'
-		}
-	];
 </script>
 
 <header
@@ -39,11 +28,7 @@
 			>
 		{/each}
 	</nav>
-	<nav class="space-x-4">
-		{#each SOCIALS as SOCIAL}
-			<a href={SOCIAL.href} title={SOCIAL.title} class={buttonVariants({ variant: 'default' })}
-				>{SOCIAL.title}</a
-			>
-		{/each}
-	</nav>
+	<a href="/github" title="Give us a star on GitHub" class={buttonVariants({ variant: 'primary' })}
+		>GitHub</a
+	>
 </header>
