@@ -29,7 +29,7 @@
 </script>
 
 <header
-	class="mb-8 flex items-center justify-between rounded-xl border border-card px-8 py-4 shadow-sm"
+	class="mb-8 flex items-center justify-between rounded-xl border border-card py-4 shadow-sm md:px-8"
 >
 	<a href="/" title="Home" class={buttonVariants({ variant: 'ghost' })}>This is not AI</a>
 	<nav class="space-x-4">
