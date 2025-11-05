@@ -1,6 +1,33 @@
+<script lang="ts">
+	import ToggleTheme from './theme-toggle.svelte';
+	import { Github } from '@lucide/svelte';
+	import { buttonVariants } from './ui/button';
+</script>
+
 <footer
-	class="mt-16 flex flex-col items-center rounded-xl bg-primary px-8 py-4 text-primary-foreground shadow-sm"
+	class="mt-16 flex flex-col items-center gap-4 rounded-xl bg-primary px-8 py-6 text-primary-foreground shadow-lg"
 >
-	<h4 class="mb-4 font-bold">thisisnotai.xyz</h4>
-	<p>Made with love by Rafa Canosa & the open source community</p>
+	<div class="flex flex-col items-center gap-2">
+		<h4 class="text-xl font-semibold tracking-tight">thisisnotai.xyz</h4>
+		<p class="inline-flex items-center gap-2 text-sm text-primary-foreground/80">
+			Made by Rafa Canosa &amp; the open source community
+		</p>
+		<a
+			href="https://github.com/rafacv23/thisisnotai"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="View source on GitHub"
+			class={buttonVariants({ variant: 'default' })}
+		>
+			<Github />
+			Contribute
+		</a>
+	</div>
+	<div class="mt-4 flex w-full max-w-md items-center justify-between gap-4">
+		<ToggleTheme />
+		<div class="flex items-center gap-2">
+			<!-- Placeholder for language switcher -->
+			<span class="text-sm">Language</span>
+		</div>
+	</div>
 </footer>

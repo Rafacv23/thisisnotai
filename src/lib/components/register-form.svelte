@@ -10,7 +10,11 @@
 	let loading = $state(false);
 </script>
 
+<h3 class="mt-4 mb-2 text-xl font-semibold">
+	Subscribe to receive and email where the app releases
+</h3>
 <form
+	class="flex flex-col"
 	method="POST"
 	action="?/register"
 	use:enhance={() => {
@@ -31,7 +35,7 @@
 		};
 	}}
 >
-	<Label for="email">Email address</Label>
+	<Label for="email" class="mt-4 mb-2">Email address</Label>
 	<Input
 		type="email"
 		required
@@ -41,9 +45,12 @@
 		autocomplete="off"
 		disabled={loading}
 	/>
+	<Label for="type" class="mt-4 mb-2">Your purpose here</Label>
 	<Select bind:value={selectedType} type="single" name="type" required disabled={loading}>
 		<SelectTrigger>
-			{selectedType ? selectedType.charAt(0).toUpperCase() + selectedType.slice(1) : 'Select type'}
+			{selectedType
+				? selectedType.charAt(0).toUpperCase() + selectedType.slice(1)
+				: 'Select your role'}
 		</SelectTrigger>
 		<SelectContent>
 			<SelectItem value="artist">Artist</SelectItem>
@@ -51,8 +58,7 @@
 			<SelectItem value="sponsor">Sponsor</SelectItem>
 		</SelectContent>
 	</Select>
-	<small>When the app is available whe are going to send you and email.</small>
-	<Button disabled={loading} type="submit">
+	<Button class="mt-4" disabled={loading} type="submit">
 		{#if loading}Registering...{:else}Register{/if}
 	</Button>
 </form>
