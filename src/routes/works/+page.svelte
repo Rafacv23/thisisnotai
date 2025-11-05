@@ -22,7 +22,7 @@
 				<TabsTrigger value={tab.value}>{tab.label}</TabsTrigger>
 			{/each}
 		</TabsList>
-		<Input placeholder="Search works..." class="" />
+		<Input placeholder="Search works..." type="search" class="" />
 	</nav>
 	<TabsContent value="all">
 		<div>
