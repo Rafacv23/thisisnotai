@@ -5,7 +5,7 @@
 </script>
 
 <footer
-	class="mt-16 flex flex-col items-center gap-4 rounded-xl bg-primary px-8 py-6 text-primary-foreground shadow-lg"
+	class="mt-24 flex flex-col items-center gap-4 rounded-t-xl bg-primary px-8 py-6 text-primary-foreground shadow-lg"
 >
 	<div class="flex flex-col items-center gap-2">
 		<h4 class="text-xl font-semibold tracking-tight">thisisnotai.xyz</h4>
