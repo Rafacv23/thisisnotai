@@ -15,7 +15,12 @@
 	</h2>
 	<nav class="mb-8 flex flex-row items-center space-x-4">
 		<a href="#why" class={buttonVariants({ variant: 'default' })}><Pencil /> Join us</a>
-		<a href="#why" class={buttonVariants({ variant: 'secondary' })}>
+		<a
+			href="https://github.com/rafacv23/thisisnotai"
+			target="_blank"
+			rel="noreferrer"
+			class={buttonVariants({ variant: 'secondary' })}
+		>
 			<Github />
 			Star on Github</a
 		>

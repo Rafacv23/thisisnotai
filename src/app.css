@@ -189,4 +189,7 @@
 	h2 {
 		@apply scroll-m-20 text-lg tracking-tight italic lg:text-xl;
 	}
+	h3 {
+		@apply mt-4 mb-2 text-xl font-semibold text-foreground;
+	}
 }
