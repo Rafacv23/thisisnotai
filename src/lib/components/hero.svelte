@@ -1,5 +1,5 @@
 <script>
-	import { Github, Mouse, Pencil, PersonStanding } from '@lucide/svelte';
+	import { Github, Mouse, Pencil, PersonStanding, Hand } from '@lucide/svelte';
 	import Badge from './ui/badge/badge.svelte';
 	import { buttonVariants } from './ui/button';
 	import { m } from '$lib/paraglide/messages.js';
@@ -38,7 +38,8 @@
 					{m.hero_github_btn()}
 				</a>
 			</nav>
-			<Mouse class="animate-bounce" />
+			<Mouse class="hidden animate-bounce lg:block" />
+			<Hand class="block animate-bounce lg:hidden" />
 		</div>
 	{/if}
 </hero>
