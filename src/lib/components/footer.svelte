@@ -25,7 +25,7 @@
 			{m.footer_github_btn()}
 		</a>
 	</div>
-	<div class="mt-4 flex w-full max-w-md items-center justify-between gap-4">
+	<div class="flex w-full max-w-md items-center justify-between gap-4">
 		<ToggleTheme />
 		<LangToggle />
 	</div>

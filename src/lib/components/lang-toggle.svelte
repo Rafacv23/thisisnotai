@@ -9,10 +9,14 @@
 		DropdownMenuGroup
 	} from '$lib/components/ui/dropdown-menu';
 	import { m } from '$lib/paraglide/messages';
+	import { Languages } from '@lucide/svelte';
+	import { buttonVariants } from './ui/button';
 </script>
 
 <DropdownMenu>
-	<DropdownMenuTrigger>{m.footer_lang_btn()}</DropdownMenuTrigger>
+	<DropdownMenuTrigger class={buttonVariants({ variant: 'secondary' })}
+		><Languages />{m.footer_lang_btn()}</DropdownMenuTrigger
+	>
 	<DropdownMenuContent>
 		<DropdownMenuGroup>
 			<DropdownMenuLabel>Select Language</DropdownMenuLabel>
