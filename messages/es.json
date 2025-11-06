@@ -1,7 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "¡Hola, {name} desde es!",
-	"hero_badge": "No se permite IA",
+	"hero_badge": "This is not AI",
 	"h1": "Celebrando la creatividad 100% humana",
 	"h2": "Descubre, comparte y apoya ideas hechas por personas reales—sin IA, solo imaginación humana auténtica.",
 	"hero_join_btn": "Únete",
