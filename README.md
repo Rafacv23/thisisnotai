@@ -1,38 +1,102 @@
-# sv
+# This is not AI
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+**Celebrating 100% Human Creativity**
 
-## Creating a project
+Welcome to **thisisnotai.xyz** – a platform dedicated to showcasing, supporting, and celebrating ideas and projects made entirely by real people. In a world increasingly dominated by artificial intelligence, we believe in the irreplaceable spark of human imagination.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
 
-```sh
-# create a new project in the current directory
-npx sv create
+## 🚀 What is thisisnotai?
 
-# create a new project in my-app
-npx sv create my-app
-```
+**thisisnotai** is a web application where creators, developers, and sponsors can register and share projects that are 100% human-made. No AI-generated content—just authentic creativity.
 
-## Developing
+- **Discover**: Browse a curated collection of original works.
+- **Share**: Register your own project and connect with like-minded creators.
+- **Support**: Find and sponsor projects that value genuine human ingenuity.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+---
 
-```sh
-npm run dev
+## 🌟 Features
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- **Human-Only Projects**: All submissions are verified to be AI-free.
+- **Multi-language Support**: Available in English and Spanish.
+- **Community Driven**: Open source and welcoming contributions.
+- **Privacy First**: Minimal data collection, maximum respect for your privacy.
 
-## Building
+---
 
-To create a production version of your app:
+## 🛠️ Tech Stack
 
-```sh
-npm run build
-```
+- **SvelteKit** – Fast, modern web framework
+- **Paraglide JS** – Internationalization (i18n)
+- **Drizzle ORM** – Database management
+- **Tailwind CSS** – Utility-first styling
+- **Open Source** – MIT License
 
-You can preview the production build with `npm run preview`.
+---
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 📦 Getting Started
+
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/rafacv23/thisisnotai.git
+   cd thisisnotai
+   ```
+
+2. **Install dependencies**
+   ```sh
+   npm install
+   # or
+   bun install
+   ```
+
+3. **Run the development server**
+   ```sh
+   npm run dev
+   # or
+   bun run dev
+   ```
+
+4. **Build for production**
+   ```sh
+   npm run build
+   ```
+
+---
+
+## 🌍 Internationalization
+
+Translations are managed with [Paraglide JS](https://inlang.com/).
+Currently supported languages:
+- English
+- Spanish
+
+Want to add another language? Open a PR!
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from everyone!
+- Fork the repo and submit a pull request.
+- Suggest features or improvements.
+- Help us spread the word!
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 📫 Contact
+
+Made by [Rafa Canosa](https://github.com/rafacv23) & the open source community.
+Questions or feedback? Open an issue or reach out on GitHub.
+
+---
+
+## 📝 License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+**Not AI Allowed. Only Human Creativity.**
