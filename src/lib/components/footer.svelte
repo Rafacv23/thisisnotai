@@ -2,6 +2,8 @@
 	import ToggleTheme from './theme-toggle.svelte';
 	import { Github } from '@lucide/svelte';
 	import { buttonVariants } from './ui/button';
+	import LangToggle from './lang-toggle.svelte';
+	import { m } from '$lib/paraglide/messages';
 </script>
 
 <footer
@@ -10,7 +12,7 @@
 	<div class="flex flex-col items-center gap-2">
 		<h4 class="text-xl font-semibold tracking-tight">thisisnotai.xyz</h4>
 		<p class="inline-flex items-center gap-2 text-sm text-primary-foreground/80">
-			Made by Rafa Canosa &amp; the open source community
+			{m.footer_p()}
 		</p>
 		<a
 			href="https://github.com/rafacv23/thisisnotai"
@@ -20,14 +22,15 @@
 			class={buttonVariants({ variant: 'default' })}
 		>
 			<Github />
-			Contribute
+			{m.footer_github_btn()}
 		</a>
 	</div>
 	<div class="mt-4 flex w-full max-w-md items-center justify-between gap-4">
 		<ToggleTheme />
 		<div class="flex items-center gap-2">
 			<!-- Placeholder for language switcher -->
-			<span class="text-sm">Language</span>
+			<LangToggle />
+			<span class="text-sm">{m.footer_lang_btn()}</span>
 		</div>
 	</div>
 </footer>
