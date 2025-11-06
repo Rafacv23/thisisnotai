@@ -27,10 +27,6 @@
 	</div>
 	<div class="mt-4 flex w-full max-w-md items-center justify-between gap-4">
 		<ToggleTheme />
-		<div class="flex items-center gap-2">
-			<!-- Placeholder for language switcher -->
-			<LangToggle />
-			<span class="text-sm">{m.footer_lang_btn()}</span>
-		</div>
+		<LangToggle />
 	</div>
 </footer>
