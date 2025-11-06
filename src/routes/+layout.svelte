@@ -10,6 +10,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>This is not AI | Celebrating 100% Human Creativity</title>
 </svelte:head>
 
 <Toaster />
