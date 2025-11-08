@@ -14,7 +14,7 @@
 </script>
 
 <hero
-	class="mb-16 flex h-dvh flex-col items-center justify-center gap-4 rounded-b-xl
+	class="mb-16 flex h-dvh flex-col items-center justify-center gap-4 rounded-xl
 		bg-foreground text-center text-background shadow-lg"
 >
 	{#if animate}
