@@ -2,6 +2,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
+	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
 
@@ -16,5 +17,6 @@
 <Toaster />
 
 <ModeWatcher />
+<Header />
 {@render children()}
 <Footer />
