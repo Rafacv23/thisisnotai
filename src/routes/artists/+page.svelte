@@ -2,6 +2,11 @@
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { Tabs, TabsContent, TabsList, TabsTrigger } from '$lib/components/ui/tabs/index';
 	import WorkCard from '$lib/components/work-card.svelte';
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+
+	console.log(data);
 
 	const TABS = [
 		{ value: 'all', label: 'All' },

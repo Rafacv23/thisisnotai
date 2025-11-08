@@ -4,8 +4,8 @@
 
 	const SECTIONS = [
 		{
-			title: 'Works',
-			href: '/works',
+			title: 'Artists',
+			href: '/artists',
 			icon: Brush
 		},
 		{
