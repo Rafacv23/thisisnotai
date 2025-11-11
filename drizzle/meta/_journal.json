@@ -15,6 +15,13 @@
       "when": 1762624150332,
       "tag": "0001_outgoing_the_hood",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1762883709192,
+      "tag": "0002_rich_famine",
+      "breakpoints": true
     }
   ]
 }

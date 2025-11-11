@@ -21,7 +21,6 @@ export const artists = sqliteTable('artists', {
 	// Profile
 	bio: text('bio'), // Short bio (500 chars max recommended)
 	avatar_url: text('avatar_url'), // Profile picture URL
-	cover_image_url: text('cover_image_url'), // Banner/header image (optional)
 	location: text('location'), // "Barcelona, Spain" (optional)
 	category: text('category').notNull(), // Primary art category: "digital art", "photography", etc.
 	open_for_commissions: integer('open_for_commissions', { mode: 'boolean' }).default(false),
@@ -47,4 +46,19 @@ export const artists = sqliteTable('artists', {
 		shop?: string; // Generic shop link
 		other?: string;
 	}>()
+});
+
+export const pendingArtists = sqliteTable('pendingArtists', {
+	// Primary Key
+	id: text('id').primaryKey(), // uuid
+
+	// Basic Info
+	username: text('username').notNull().unique(), // URL-friendly: "maria-gonzalez"
+	email: text('email').unique(),
+	status: text('status').notNull().default('pending'), // "pending", "approved", "rejected"
+
+	// Profile
+	bio: text('bio'), // Short bio (500 chars max recommended)
+	category: text('category').notNull(), // Primary art category: "digital art", "photography", etc.
+	created_at: integer('created_at', { mode: 'timestamp' }).notNull()
 });
