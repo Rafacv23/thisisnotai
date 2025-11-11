@@ -28,7 +28,7 @@
 </script>
 
 <header
-	class="sticky top-2 mx-auto mt-2 flex w-full max-w-3xl justify-between rounded-xl bg-background/80 px-4 py-4 shadow-sm backdrop-blur-2xl"
+	class="sticky top-2 mt-2 flex w-full max-w-3xl justify-between rounded-xl bg-background/80 px-4 py-4 shadow-sm backdrop-blur-2xl lg:mx-auto"
 >
 	<a href="/" title="Home" class={buttonVariants({ variant: 'ghost' })}>
 		<svg
@@ -74,8 +74,10 @@
 		{/each}
 	</nav>
 	<a
-		href="/github"
+		href="https://github.com/rafacv23/thisisnotai"
 		title="Give us a star on GitHub"
+		target="_blank"
+		rel="noopener noreferrer"
 		class={buttonVariants({ variant: 'default', class: 'hidden md:flex' })}
 	>
 		<Github />

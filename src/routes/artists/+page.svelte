@@ -10,8 +10,7 @@
 		{ value: 'drawing', label: 'Drawing' },
 		{ value: 'music', label: 'Music' },
 		{ value: 'writing', label: 'Writing' },
-		{ value: 'video', label: 'Video' },
-		{ value: 'studies', label: 'Studies' }
+		{ value: 'video', label: 'Video' }
 	];
 </script>
 
