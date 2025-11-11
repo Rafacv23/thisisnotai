@@ -1,6 +1,12 @@
 <script lang="ts">
-	import { BookOpen, Brush, CloudUpload, Github } from '@lucide/svelte';
+	import { BookOpen, Brush, CloudUpload, Github, Menu } from '@lucide/svelte';
 	import { buttonVariants } from './ui/button';
+	import {
+		DropdownMenu,
+		DropdownMenuTrigger,
+		DropdownMenuContent,
+		DropdownMenuItem
+	} from '$lib/components/ui/dropdown-menu/index';
 
 	const SECTIONS = [
 		{
@@ -42,7 +48,24 @@
 		>
 		thisisnotai.xyz</a
 	>
-	<nav class="space-x-4">
+
+	<DropdownMenu>
+		<DropdownMenuTrigger class={buttonVariants({ variant: 'ghost', class: 'md:hidden' })}>
+			<Menu />
+		</DropdownMenuTrigger>
+		<DropdownMenuContent class="mr-4">
+			{#each SECTIONS as SECTION (SECTION.href)}
+				<DropdownMenuItem>
+					<a href={SECTION.href} title={SECTION.title} class="flex items-center space-x-2">
+						<SECTION.icon />
+						<span>{SECTION.title}</span>
+					</a>
+				</DropdownMenuItem>
+			{/each}
+		</DropdownMenuContent>
+	</DropdownMenu>
+
+	<nav class="hidden space-x-4 md:flex">
 		{#each SECTIONS as SECTION (SECTION.href)}
 			<a href={SECTION.href} title={SECTION.title} class={buttonVariants({ variant: 'ghost' })}>
 				<SECTION.icon />
@@ -50,7 +73,11 @@
 			>
 		{/each}
 	</nav>
-	<a href="/github" title="Give us a star on GitHub" class={buttonVariants({ variant: 'default' })}>
+	<a
+		href="/github"
+		title="Give us a star on GitHub"
+		class={buttonVariants({ variant: 'default', class: 'hidden md:flex' })}
+	>
 		<Github />
 		GitHub</a
 	>
