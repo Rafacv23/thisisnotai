@@ -2,6 +2,31 @@ import type { Actions } from './$types';
 import { fail } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 import { pendingArtists } from '$lib/server/db/schema';
+import { Resend } from 'resend';
+import { RESEND_API_KEY, EMAIL } from '$env/static/private';
+
+const resend = new Resend(RESEND_API_KEY);
+
+async function sendEmail(from: string) {
+	try {
+		console.log('Sending email from:', from);
+		const { data, error } = await resend.emails.send({
+			from: 'noreply@rafacanosa.dev',
+			to: [EMAIL],
+			subject: 'New Contributor Registered | thisisnotai.xyz',
+			html: `<p>A new contributor ${from} has been registered to add his art into thisisnotai.xyz, check it out!</p>`
+		});
+		console.log('Resend response:', { data, error });
+
+		if (error) {
+			return Response.json({ error }, { status: 500 });
+		}
+
+		return Response.json({ data });
+	} catch (error) {
+		return Response.json({ error: 'Email sending failed' }, { status: 500 });
+	}
+}
 
 export const actions = {
 	// add user to the pending list
@@ -42,6 +67,15 @@ export const actions = {
 			return fail(500, {
 				description: 'Database error',
 				error: 'Could not register to the waitlist. Please try again later.'
+			});
+		}
+
+		try {
+			await sendEmail(email);
+		} catch (err) {
+			return fail(500, {
+				description: 'Email error',
+				error: 'Could not send notification email.'
 			});
 		}
 	}
