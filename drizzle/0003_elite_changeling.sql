@@ -1,0 +1,1 @@
+DROP INDEX `pendingArtists_username_unique`;

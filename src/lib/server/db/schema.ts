@@ -53,7 +53,7 @@ export const pendingArtists = sqliteTable('pendingArtists', {
 	id: text('id').primaryKey(), // uuid
 
 	// Basic Info
-	username: text('username').notNull().unique(), // URL-friendly: "maria-gonzalez"
+	username: text('username').notNull(), // URL-friendly: "maria-gonzalez"
 	email: text('email').unique(),
 	status: text('status').notNull().default('pending'), // "pending", "approved", "rejected"
 
