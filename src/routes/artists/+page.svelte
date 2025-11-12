@@ -2,21 +2,22 @@
 	import { Tabs, TabsContent, TabsList, TabsTrigger } from '$lib/components/ui/tabs/index';
 	import ArtistCard from '$lib/components/artist-card.svelte';
 	import type { PageProps } from './$types';
+	import { m } from '$lib/paraglide/messages';
 
 	let { data }: PageProps = $props();
 
 	const TABS = [
-		{ value: 'all', label: 'All' },
-		{ value: 'drawing', label: 'Drawing' },
-		{ value: 'music', label: 'Music' },
-		{ value: 'writing', label: 'Writing' },
-		{ value: 'video', label: 'Video' }
+		{ value: 'all', label: m.artists_label_1() },
+		{ value: 'drawing', label: m.artists_label_2() },
+		{ value: 'music', label: m.artists_label_3() },
+		{ value: 'writing', label: m.artists_label_4() },
+		{ value: 'video', label: m.artists_label_5() }
 	];
 </script>
 
 <main class="mx-4 mt-8 max-w-3xl md:mt-12 lg:mx-auto lg:mt-16">
-	<h1>Different type of arts, made by humans</h1>
-	<h2>Where the spirit does not work with the hand, there is no art. - Leonardo Da Vinci</h2>
+	<h1>{m.artists_h1()}</h1>
+	<h2>{m.artists_h2()}</h2>
 	<Tabs value="all">
 		<nav class="mt-8 mb-4 flex flex-col items-center gap-2 md:flex-row">
 			<TabsList>

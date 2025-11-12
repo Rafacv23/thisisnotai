@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BookOpen, Brush, CloudUpload, Github, Menu } from '@lucide/svelte';
+	import { Brush, CloudUpload, Github, Menu } from '@lucide/svelte';
 	import { buttonVariants } from './ui/button';
 	import {
 		DropdownMenu,
@@ -7,22 +7,18 @@
 		DropdownMenuContent,
 		DropdownMenuItem
 	} from '$lib/components/ui/dropdown-menu/index';
+	import { m } from '$lib/paraglide/messages';
 
 	const SECTIONS = [
 		{
-			title: 'Artists',
+			title: m.header_1(),
 			href: '/artists',
 			icon: Brush
 		},
 		{
-			title: 'Contribute',
+			title: m.header_2(),
 			href: '/contribute',
 			icon: CloudUpload
-		},
-		{
-			title: 'About',
-			href: '/about',
-			icon: BookOpen
 		}
 	];
 </script>

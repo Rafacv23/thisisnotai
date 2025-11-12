@@ -25,7 +25,6 @@ export async function getArtistByUsername(username: string): Promise<Partial<Art
 			display_name: artists.display_name,
 			bio: artists.bio,
 			avatar_url: artists.avatar_url,
-			cover_image_url: artists.cover_image_url,
 			location: artists.location,
 			category: artists.category,
 			open_for_commissions: artists.open_for_commissions,

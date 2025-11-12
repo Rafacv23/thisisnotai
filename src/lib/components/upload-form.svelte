@@ -7,6 +7,7 @@
 	import { Circle, CloudUpload } from '@lucide/svelte';
 	import { toast } from 'svelte-sonner';
 	import { enhance } from '$app/forms';
+	import { m } from '$lib/paraglide/messages';
 
 	let loading = $state(false);
 	let selectedType: 'drawer' | 'writer' | 'video' | 'music' | 'other' | undefined =
@@ -35,46 +36,46 @@
 		};
 	}}
 >
-	<Label class="mt-4 mb-2">Your Name*</Label>
+	<Label class="mt-4 mb-2">{m.form_name()}</Label>
 	<Input
-		placeholder="Your name"
+		placeholder={m.form_name()}
 		disabled={loading}
 		name="name"
 		type="text"
 		autocomplete="off"
 		required
 	/>
-	<Label class="mt-4 mb-2">Your Email*</Label>
+	<Label class="mt-4 mb-2">{m.form_email()}</Label>
 	<Input
-		placeholder="Your email"
+		placeholder={m.form_email()}
 		disabled={loading}
 		name="email"
 		type="email"
 		autocomplete="off"
 		required
 	/>
-	<Label class="mt-4 mb-2">What do you do?*</Label>
+	<Label class="mt-4 mb-2">{m.form_art_type()}</Label>
 	<Select bind:value={selectedType} type="single" name="type" required disabled={loading}>
 		<SelectTrigger disabled={loading}>
 			{selectedType
 				? selectedType.charAt(0).toUpperCase() + selectedType.slice(1)
-				: 'Select your role'}
+				: m.form_art_type_placeholder()}
 		</SelectTrigger>
 		<SelectContent>
-			<SelectItem value="drawer">Drawer</SelectItem>
-			<SelectItem value="writer">Writer</SelectItem>
-			<SelectItem value="video">Video</SelectItem>
-			<SelectItem value="music">Music</SelectItem>
-			<SelectItem value="other">Other</SelectItem>
+			<SelectItem value="drawer">{m.form_art_type_option_1()}</SelectItem>
+			<SelectItem value="writer">{m.form_art_type_option_2()}</SelectItem>
+			<SelectItem value="video">{m.form_art_type_option_3()}</SelectItem>
+			<SelectItem value="music">{m.form_art_type_option_4()}</SelectItem>
+			<SelectItem value="other">{m.form_art_type_option_5()}</SelectItem>
 		</SelectContent>
 	</Select>
-	<Label class="mt-4 mb-2">Tell us something about you</Label>
-	<Textarea class="resize-none" name="bio" placeholder="Your Art Description" rows={5} />
+	<Label class="mt-4 mb-2">{m.form_textarea()}</Label>
+	<Textarea class="resize-none" name="bio" placeholder={m.form_textarea()} rows={5} />
 	<Button disabled={loading} class="mt-4" type="submit">
 		{#if loading}
-			<Circle class="mr-2 animate-spin" /> Sending...
+			<Circle class="mr-2 animate-spin" /> {m.send_btn_loading()}
 		{:else}
-			<CloudUpload /> Send
+			<CloudUpload /> {m.send_btn()}
 		{/if}
 	</Button>
 </form>

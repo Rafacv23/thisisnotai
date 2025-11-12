@@ -4,6 +4,7 @@
 	import type { PageProps } from './$types';
 	import { Badge } from '$lib/components/ui/badge/index';
 	import { ArrowLeft, ArrowUpRight, User } from '@lucide/svelte';
+	import { m } from '$lib/paraglide/messages';
 
 	let { data }: PageProps = $props();
 
@@ -14,7 +15,7 @@
 	<!-- Avatar and Name -->
 	<nav>
 		<a href="/artists" class={buttonVariants({ variant: 'link' })}
-			><ArrowLeft /> Browse more artists
+			><ArrowLeft /> {m.artist_page_back_btn()}
 		</a>
 	</nav>
 	<div class="flex flex-col items-center space-y-2">
@@ -32,19 +33,19 @@
 		<div class="flex gap-2">
 			<Badge variant="secondary">{artist.category}</Badge>
 			{#if artist.open_for_commissions}
-				<Badge variant="secondary">Open for Commissions</Badge>
+				<Badge variant="secondary">{m.artist_page_commisions()}</Badge>
 			{/if}
 		</div>
 	</div>
 
 	<!-- Bio -->
-	<h3 class="inline-flex gap-2"><User /> About</h3>
+	<h3 class="inline-flex gap-2"><User /> {m.artist_page_about()}</h3>
 	{#if artist.bio}
 		<p class="text-lg text-muted-foreground">{artist.bio}</p>
 	{/if}
 
 	<!-- Social Links -->
-	<h3 class="inline-flex gap-2"><ArrowUpRight /> Contact info</h3>
+	<h3 class="inline-flex gap-2"><ArrowUpRight /> {m.artists_card_contact()}</h3>
 	{#if artist.social_links}
 		<ul class="flex flex-wrap gap-3">
 			{#each Object.entries(artist.social_links ?? {}) as [key, url] (key)}

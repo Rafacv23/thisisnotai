@@ -8,6 +8,7 @@
 	import type { Artist } from '$lib/server/db/artists';
 	import { ArrowUpRight } from '@lucide/svelte';
 	import { buttonVariants } from './ui/button';
+	import { m } from '$lib/paraglide/messages';
 
 	export let artist: Partial<Artist>;
 </script>
@@ -20,7 +21,8 @@
 	<CardContent>{artist.bio}</CardContent>
 	<CardFooter class="justify-end">
 		<a href={`/artists/${artist.username}`} class={buttonVariants({ variant: 'link' })}>
-			Contact <ArrowUpRight />
+			{m.artists_card_contact()}
+			<ArrowUpRight />
 		</a>
 	</CardFooter>
 </Card>

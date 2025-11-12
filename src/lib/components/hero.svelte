@@ -1,5 +1,5 @@
 <script>
-	import { Github, Mouse, Pencil, PersonStanding, Hand } from '@lucide/svelte';
+	import { Mouse, PersonStanding, Hand, CloudUploadIcon, Brush } from '@lucide/svelte';
 	import Badge from './ui/badge/badge.svelte';
 	import { buttonVariants } from './ui/button';
 	import { m } from '$lib/paraglide/messages.js';
@@ -25,16 +25,11 @@
 				{m.h2()}
 			</h2>
 			<nav class="mb-8 flex flex-row items-center space-x-4">
-				<a href="#why" class={buttonVariants({ variant: 'default' })}
-					><Pencil /> {m.hero_join_btn()}</a
+				<a href="/contribute" class={buttonVariants({ variant: 'default' })}
+					><CloudUploadIcon /> {m.hero_join_btn()}</a
 				>
-				<a
-					href="https://github.com/rafacv23/thisisnotai"
-					target="_blank"
-					rel="noreferrer"
-					class={buttonVariants({ variant: 'secondary' })}
-				>
-					<Github />
+				<a href="/artists" class={buttonVariants({ variant: 'secondary' })}>
+					<Brush />
 					{m.hero_github_btn()}
 				</a>
 			</nav>
